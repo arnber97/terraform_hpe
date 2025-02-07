@@ -13,12 +13,12 @@ resource "hpegl_vmaas_instance" "WEBSRV" {
 		}
 	volume {
 		name = "root_vol-web"
-		size = var.root_vol-size
+		size = var.root_vol-size-web
 		datastore_id = "auto"
 		}
 	volume {
 		name = "local_vol-web"
-		size = var.local_vol-size
+		size = var.local_vol-size-web
 		datastore_id = "auto"
 		}
 	config {
