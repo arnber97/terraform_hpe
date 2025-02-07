@@ -1,5 +1,5 @@
 ###################################
-Default VAR
+#Default VAR
 ###################################
 variable "tag" {
 	type = string
@@ -7,7 +7,7 @@ variable "tag" {
 	}
 
 ###################################
-WEB Server VAR
+#WEB Server VAR
 ###################################
 variable "vmname-web" {
     type = string
@@ -20,7 +20,7 @@ variable "local_vol-size-web" {
 	default = 5
 	}
 ###################################
-APP Server VAR
+#APP Server VAR
 ###################################
 variable "vmname-app" {
     type = string
@@ -33,7 +33,7 @@ variable "local_vol-size-app" {
 	default = 5
 	}
 ###################################
-BDD Server VAR
+#BDD Server VAR
 ###################################
 variable "vmname-bdd" {
     type = string
