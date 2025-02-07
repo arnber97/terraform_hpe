@@ -18,6 +18,9 @@ data "hpegl_vmaas_network" "blue_net" {
 data "hpegl_vmaas_network" "green_net" {
      name = "Green-Net"
    }
+data "hpegl_vmaas_network" "greenboatz1_net" {
+     name = "GreenBoat-Z1"
+   }
 
 # Group
 data "hpegl_vmaas_group" "default_group" {
