@@ -2,7 +2,7 @@
 # Ressources
 #########################################
 resource "hpegl_vmaas_instance" "TF2-ABR" {
-	name = var.vmname
+	name = var.vmname-web
 	layout_id = data.hpegl_vmaas_layout.vmware.id
  	instance_type_code = data.hpegl_vmaas_layout.vmware.instance_type_code
 	cloud_id = data.hpegl_vmaas_cloud.cloud.id
@@ -12,12 +12,12 @@ resource "hpegl_vmaas_instance" "TF2-ABR" {
 		id = data.hpegl_vmaas_network.green_net.id
 		}
 	volume {
-		name = "root_vol"
+		name = "root_vol-web"
 		size = var.root_vol-size
 		datastore_id = "auto"
 		}
 	volume {
-		name = "local_vol"
+		name = "local_vol-web"
 		size = var.local_vol-size
 		datastore_id = "auto"
 		}
