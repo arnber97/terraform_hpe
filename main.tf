@@ -9,7 +9,7 @@ resource "hpegl_vmaas_instance" "WEBSRV" {
 	group_id = data.hpegl_vmaas_group.greenboat.id
 	plan_id = data.hpegl_vmaas_plan.g1-small.id
 	network {
-		id = data.hpegl_vmaas_network.greenboat-z1.id
+		id = data.hpegl_vmaas_network.greenboatz1_net.id
 		}
 	volume {
 		name = "root_vol-web"
@@ -39,7 +39,7 @@ resource "hpegl_vmaas_instance" "APPSRV" {
 	group_id = data.hpegl_vmaas_group.greenboat.id
 	plan_id = data.hpegl_vmaas_plan.g1-Medium.id
 	network {
-		id = data.hpegl_vmaas_network.greenboat-z1.id
+		id = data.hpegl_vmaas_network.greenboatz_net1.id
 		}
 	volume {
 		name = "root_vol"
@@ -69,7 +69,7 @@ resource "hpegl_vmaas_instance" "BDDSRV" {
 	group_id = data.hpegl_vmaas_group.greenboat.id
 	plan_id = data.hpegl_vmaas_plan.g1-Medium.id
 	network {
-		id = data.hpegl_vmaas_network.greenboat-z1.id
+		id = data.hpegl_vmaas_network.greenboatz1_net.id
 		}
 	volume {
 		name = "root_vol"
