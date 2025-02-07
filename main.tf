@@ -2,7 +2,7 @@
 # Ressources
 #########################################
 resource "hpegl_vmaas_instance" "TF2-ABR" {
-	name = "tf2-abr"
+	name = var.vmname
 	layout_id = data.hpegl_vmaas_layout.vmware.id
  	instance_type_code = data.hpegl_vmaas_layout.vmware.instance_type_code
 	cloud_id = data.hpegl_vmaas_cloud.cloud.id
@@ -13,19 +13,19 @@ resource "hpegl_vmaas_instance" "TF2-ABR" {
 		}
 	volume {
 		name = "root_vol"
-		size = 25
+		size = var.root_vol-size
 		datastore_id = "auto"
 		}
 	volume {
 		name = "local_vol"
-		size = 5
+		size = var.local_vol-size
 		datastore_id = "auto"
 		}
 	config {
 		template_id = data.hpegl_vmaas_template.centos-7.id
 		resource_pool_id = data.hpegl_vmaas_resource_pool.cl_resource_pool.id
 		no_agent = false
-		asset_tag = "TF2 VM"
+		asset_tag = var.tag
 		folder_code = data.hpegl_vmaas_cloud_folder.folder.code
 		}
 	power = "poweron"
