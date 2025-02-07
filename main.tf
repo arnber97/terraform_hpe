@@ -1,7 +1,7 @@
 #########################################
 # Ressources
 #########################################
-resource "hpegl_vmaas_instance" "TF2-ABR" {
+resource "hpegl_vmaas_instance" "WEBSRV" {
 	name = var.vmname-web
 	layout_id = data.hpegl_vmaas_layout.vmware.id
  	instance_type_code = data.hpegl_vmaas_layout.vmware.instance_type_code
@@ -31,7 +31,7 @@ resource "hpegl_vmaas_instance" "TF2-ABR" {
 	power = "poweron"
 	}
 
-resource "hpegl_vmaas_instance" "TF3-ABR" {
+resource "hpegl_vmaas_instance" "APPSRV" {
 	name = var.vmname-app
 	layout_id = data.hpegl_vmaas_layout.vmware.id
  	instance_type_code = data.hpegl_vmaas_layout.vmware.instance_type_code
@@ -61,7 +61,7 @@ resource "hpegl_vmaas_instance" "TF3-ABR" {
 	power = "poweron"
 	}
 
-resource "hpegl_vmaas_instance" "TF4-ABR" {
+resource "hpegl_vmaas_instance" "BDDSRV" {
 	name = var.vmname-bdd
 	layout_id = data.hpegl_vmaas_layout.vmware.id
  	instance_type_code = data.hpegl_vmaas_layout.vmware.instance_type_code
