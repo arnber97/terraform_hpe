@@ -1,5 +1,5 @@
 variable "vmname" {
-    type = "string"
+    type = string
     default = "tf-vm-abr1"
 }
 variable "root_vol-size" {
@@ -9,6 +9,6 @@ variable "local_vol-size" {
 	default = 5
 	}
 variable "tag" {
-	type = "string"
+	type = string
 	default = "Terraform VM ABR"
 	}
