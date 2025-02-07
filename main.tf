@@ -37,7 +37,7 @@ resource "hpegl_vmaas_instance" "APPSRV" {
  	instance_type_code = data.hpegl_vmaas_layout.vmware.instance_type_code
 	cloud_id = data.hpegl_vmaas_cloud.cloud.id
 	group_id = data.hpegl_vmaas_group.greenboat.id
-	plan_id = data.hpegl_vmaas_plan.g1-small.id
+	plan_id = data.hpegl_vmaas_plan.g1-medium.id
 	network {
 		id = data.hpegl_vmaas_network.greenboat-z1.id
 		}
