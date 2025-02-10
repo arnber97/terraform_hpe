@@ -26,13 +26,14 @@ provider "hpegl" {
 ```
 Ou trouver les informations Location et Space_Name ?
 Ces informations sont disponibles depuis l'interface WEB de PCE. Se connecter à l'interface puis cliquer sur son profil:
-<img src="/IMG/PCE-Change_space.png" alt="Choisir Change Space" style="height: 100px; width:100px;"/>
+
+![Change Space](https://github.com/arnber97/terraform_hpe/blob/main/IMG/PCE-Change_space.png)
 
 L'écran suivant affiche les espaces disponibles selon votre profil et donc le contenu de la variable: space_name !
 
 Pour trouver le contenu de la variable Location, il suffit de se connecter sur la page d'accueil et de faire dérouler le menu en haut à droite:
 
-![Name](./IMG/PCE-Name.png)
+![Name](https://github.com/arnber97/terraform_hpe/blob/main/IMG/PCE-Name.png)
 
 Vous êtes prêt à tester la connexion ... mais pas sans s'être authentifié avant !
 
@@ -43,12 +44,12 @@ Pour générer un token, il faut se rendre sur la page: Identity & Access. Cette
 
 Choisir ensuite le menu "API Clients" et créer une nouvelle clé avec "Create API Client". Donner un nom et une description à votre clé et surtout SURTOUT enregister bien toutes les informations qui s'affichent (le champ client secret n'est plus disponible par la suite !!):
 
-![API Client](./IMG/PCE-API.png)
+![API Client](https://github.com/arnber97/terraform_hpe/blob/main/IMG/PCE-API.png)
 
 ## Récupérer l'ID du Tenant
 Le Token permet de s'identifier sur PCE, mais il faut également savoir sur quel tenant déployer ses ressources. Le Tenant est identifié par un ID qui est disponible sur la page API Access. Pour accèder à cette information, il suffit de cliquer sur son profil et choisir le menu API Access. La page suivante affiche l'ID du tenant:
 
-![Tenant ID](./IMG/PCE-TenantID.png)
+![Tenant ID](https://github.com/arnber97/terraform_hpe/blob/main/IMG/PCE-TenantID.png))
 
 
 ## Passer les informations de Token en variable d'environnement
