@@ -27,7 +27,7 @@ provider "hpegl" {
 Ou trouver les informations Location et Space_Name ?
 Ces informations sont disponibles depuis l'interface WEB de PCE. Se connecter à l'interface puis cliquer sur son profil:
 
-![screenshot](IMG/PCE-Change_space.png)
+![Change Space](IMG/PCE-Change_space.png)
 
 L'écran suivant affiche les espaces disponibles selon votre profil et donc le contenu de la variable: space_name !
 
